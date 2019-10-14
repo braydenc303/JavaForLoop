@@ -21,6 +21,8 @@ public class Main {
                 }
             }
         }
+
+        System.out.println(sum3and5());
  
     }
 
@@ -39,5 +41,20 @@ public class Main {
 
     public static double calculateInterest(double amount, double interestRate) {
         return amount * (interestRate/100);
+    }
+
+    public static int sum3and5() {
+        int sum = 0;
+        int count = 0;
+        for(int i = 1; i < 100; i++) {
+            if(i % 3 == 0 && i % 5 == 0) {
+                count++;
+                sum += i;
+            }
+            if(count==5){
+                break;
+            }
+        }
+        return sum;
     }
 }
